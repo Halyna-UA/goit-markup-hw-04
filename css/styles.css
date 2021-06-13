@@ -12,6 +12,7 @@
   --border: 1px solid rgba(236, 236, 236, 1);
   --bottom-hero-hover: #188ce8;
   --bottom-hero-shaddow: rgba(0, 0, 0, 0.15);
+ 
 }
 
 body {
@@ -85,6 +86,9 @@ img {
   text-decoration: none;
   color: var(--brand-color);
 }
+/*хедер*/
+/*оформлення логотипу*/
+
 /*навігація хедера*/
 
 .main-nav,
@@ -107,6 +111,34 @@ img {
 .contacts .a-item {
   display: block;
 }
+.envelope::before{
+  display: inline-block;
+  content: "";
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-image: url(../images/envelope.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.envelope:hover:before{
+  color: inherit;
+}
+.smartphone::before{
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  background-image: url(../images/smartphone.svg); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.smartphone:hover:before{
+  color: inherit;
+}
 .contacts {
   margin-left: auto;
 }
@@ -126,7 +158,9 @@ img {
   color: var(--primery-text-color);
 }
 
-/*основна частина сторінки*/
+/*навігація хедера*/
+
+/*основна частина сторінки студія*/
 /*Блок герой*/
 
 .baner{
@@ -174,7 +208,11 @@ h1 {
   text-shadow: var(--bottom-hero-shaddow);
   background-color: var(--bottom-hero-hover);
 }
-/*секція під герой*/
+
+/*Блок герой*/
+
+/*секція особливості*/
+
 .container.content {
   display: inline-block;
 }
@@ -190,8 +228,9 @@ h1 {
   flex-wrap: nowrap;
 }
 .f-item > h3 {
-  margin-top: 0px;
+  margin-top: 30px;
   margin-bottom: 10px;
+  
 }
 .f-item > p {
   margin-top: 0px;
@@ -204,6 +243,31 @@ h1 {
 .f-item:not(:last-child) {
   margin-right: 30px;
 }
+.f-item::before{
+  display: block;
+  content: "";
+  height: 120px;
+  background-size: 0.2 0.3;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #F5F4FA;
+  border-radius: 4px;
+}
+.icon-antenna::before{
+  background-image: url(../images/antenna.svg);
+}
+.icon-clock::before{
+  background-image: url(../images/clock.svg);
+}
+.icon-diagram::before{
+  background-image: url(../images/diagram.svg);
+}
+.icon-astronaut::before{
+  background-image: url(../images/astronaut.svg);
+}
+
+
+
 
 .title .subject {
   font-weight: bold;
@@ -212,11 +276,17 @@ h1 {
   text-transform: uppercase;
   color: var(--title-text-color);
 }
+
 .text.subject {
   font-size: 14px;
   line-height: 1.7;
   color: var(--primery-text-color);
 }
+
+/*секція особливості*/
+
+/*секція чим ми займаємся*/
+
 .work {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -242,15 +312,20 @@ h1 {
 .discription-list .d-item:not(:last-child) {
   margin-right: 30px;
 }
+
+/*секція чим ми займаємся*/
+
+/*секція наша команда*/
+
 .name {
   background: #f5f4fa;
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.name .comand {
+.name .comand{
   margin-top: 0px;
 }
-.comand {
+.comand{
   font-weight: bold;
   font-size: 36px;
   line-height: 1.1;
@@ -299,6 +374,32 @@ h1 {
   box-shadow: var(--box-shadow-team);
   margin: 0px;
 }
+
+/*секція наша команда*/
+
+/* постійні клієнти*/
+.vip {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.vip .clients{
+  margin-top: 0px;
+}
+.clients{
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.1;
+  color: var(--title-text-color);
+  text-align: center;
+  margin-bottom: 50px;
+}
+.regular-list {
+  display: flex;
+}
+
+/* постійні клієнти*/
+/*основна частина сторінки студія*/
+
 /*футер*/
 
 .footer {
@@ -326,13 +427,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-/*
-.logo,
-.down-logo,
-.logo-footer {
-  margin-bottom: 20px;
-}
-*/
+
 .address-list > p {
   margin-top: 0px;
 }
@@ -356,9 +451,11 @@ h1 {
   margin-bottom: 9px;
 }
 
-/*сторінка портфоліо*/
+/*футер*/
 
+/*сторінка портфоліо*/
 /*секція навігаційних кнопок*/
+
 .portfolio {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -391,6 +488,8 @@ h1 {
   color: var(--primery-br-color);
   background: var(--accent-color);
 }
+
+/* проекти */
 
 .projects-list {
   display: flex;
@@ -438,4 +537,5 @@ h1 {
   flex-basis: 322px;
 }
 
-/*занінчення сторінки портфоліо*/
+/* проекти */
+/*сторінка портфоліо*/
