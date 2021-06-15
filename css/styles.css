@@ -12,7 +12,7 @@
   --border: 1px solid rgba(236, 236, 236, 1);
   --bottom-hero-hover: #188ce8;
   --bottom-hero-shaddow: rgba(0, 0, 0, 0.15);
- 
+  --border-clients: rgba(175, 177, 184, 1);
 }
 
 body {
@@ -122,8 +122,8 @@ img {
   background-repeat: no-repeat;
   background-position: center;
 }
-.envelope:hover:before{
-  color: inherit;
+.envelope:hover::before{
+  fill: var(--accent-color);
 }
 .smartphone::before{
   display: inline-block;
@@ -136,8 +136,8 @@ img {
   background-repeat: no-repeat;
   background-position: center;
 }
-.smartphone:hover:before{
-  color: inherit;
+.smartphone:hover::before{
+  fill: var(--accent-color);
 }
 .contacts {
   margin-left: auto;
@@ -247,7 +247,7 @@ h1 {
   display: block;
   content: "";
   height: 120px;
-  background-size: 0.2 0.3;
+  background-size: 0.2, 0.3;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #F5F4FA;
@@ -350,6 +350,7 @@ h1 {
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
+  background-color: #ffffff;
 }
 .box > h3 {
   margin-top: 0px;
@@ -358,7 +359,7 @@ h1 {
 
 .box > p {
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 16px;
 }
 .team .title .pip {
   font-weight: 500;
@@ -372,15 +373,83 @@ h1 {
   line-height: 1.1;
   color: var(--primery-text-color);
   box-shadow: var(--box-shadow-team);
+}
+.social-list{
+  display: inline-flex;
+  justify-content: center;
   margin: 0px;
+ 
+}
+.social-nav{
+  display: inline-flex;
+  align-items: center;
+  color: var(--border);
+}
+.soc-item{
+  justify-content: center;
+  padding: 0px;
+  border:none;
+  border-radius: 50%;
+  text-align: center;
+  width: 44px;
+  height: 44px;
+  color: var(--primery-br-color);
+   
+}
+.soc-item:not(:last-child){
+  margin-right: 10px;
+}
+.soc-item:hover,
+.soc-item:focus{
+  background: var(--accent-color);
+  fill: var(--primery-br-color);
 }
 
+.icon-soc{
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  
+}
+
+.icon-soc:hover,
+.icon-soc:focus{
+  fill: #ffffff; 
+}
+
+/*
+.link-icon-soc{
+  width: 20px;
+  height: 20px;
+  fill: var(--primery-br-color); 
+}
+.soc-item{
+width: 44px;
+  height: 44px;
+  fill: var(--primery-br-color);
+  border: 1px solid (var(--primery-br-color));
+  border-radius: 25px;
+}
+.soc-item:not(:last-child) {
+  margin-right: 10px;
+}
+.link-icon-soc:hover,
+.link-icon-soc:focus{
+ background-color: var(--accent-color); 
+}
+.social-nav{
+  width: 20px;
+  height: 20px;
+  background-color: var(--primery-br-color);
+}
+*/
 /*секція наша команда*/
 
 /* постійні клієнти*/
 .vip {
   padding-top: 94px;
   padding-bottom: 94px;
+   
 }
 .vip .clients{
   margin-top: 0px;
@@ -394,11 +463,32 @@ h1 {
   margin-bottom: 50px;
 }
 .regular-list {
-  display: flex;
+  display: inline-flex;
+  justify-content: center;
 }
+
+.link-icon{
+  width: 170px;
+  height: 92px;
+  fill: var(--border-clients);
+  border: 1px solid var(--border-clients);
+  border-radius: 4px;
+}
+.r-item:not(:last-child) {
+  margin-right: 30px;
+}
+  
+.link-icon:hover,
+.link-icon:focus {
+  fill: var(--accent-color);
+}
+
+
+
 
 /* постійні клієнти*/
 /*основна частина сторінки студія*/
+
 
 /*футер*/
 
