@@ -111,34 +111,36 @@ img {
 .contacts .a-item {
   display: block;
 }
-.envelope::before{
+
+.icon-envelope{
   display: inline-block;
   content: "";
   width: 16px;
   height: 12px;
   margin-right: 10px;
-  background-image: url(../images/envelope.svg);
-  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  fill: currentColor;
 }
-.envelope:hover::before{
+.icon-envelope:hover{
   fill: var(--accent-color);
 }
-.smartphone::before{
+
+.icon-smartphone{
   display: inline-block;
   content: "";
   width: 10px;
   height: 16px;
   margin-right: 10px;
-  background-image: url(../images/smartphone.svg); 
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  fill: currentColor;
 }
-.smartphone:hover::before{
+.icon-smartphone:hover{
   fill: var(--accent-color);
 }
+
 .contacts {
   margin-left: auto;
 }
@@ -157,6 +159,11 @@ img {
 .auth-nav {
   color: var(--primery-text-color);
 }
+.a-item:hover,
+.a-item:focus{
+  fill: var(--accent-color);
+}
+
 
 /*навігація хедера*/
 
@@ -338,6 +345,8 @@ h1 {
 }
 .t-item {
   width: 270px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .t-item:not(:last-child) {
   margin-right: 30px;
@@ -383,18 +392,19 @@ h1 {
 .social-nav{
   display: inline-flex;
   align-items: center;
-  color: var(--border);
+  
 }
 .soc-item{
+  display: flex;
   justify-content: center;
+  align-items: center;
+  align-content: center;
   padding: 0px;
   border:none;
   border-radius: 50%;
-  text-align: center;
   width: 44px;
   height: 44px;
-  color: var(--primery-br-color);
-   
+  color: currentColor;
 }
 .soc-item:not(:last-child){
   margin-right: 10px;
@@ -402,14 +412,13 @@ h1 {
 .soc-item:hover,
 .soc-item:focus{
   background: var(--accent-color);
-  fill: var(--primery-br-color);
+  fill: #ffffff;
 }
 
 .icon-soc{
   width: 20px;
   height: 20px;
-  fill: currentColor;
-  
+  fill: var(--border-clients);
 }
 
 .icon-soc:hover,
@@ -417,32 +426,7 @@ h1 {
   fill: #ffffff; 
 }
 
-/*
-.link-icon-soc{
-  width: 20px;
-  height: 20px;
-  fill: var(--primery-br-color); 
-}
-.soc-item{
-width: 44px;
-  height: 44px;
-  fill: var(--primery-br-color);
-  border: 1px solid (var(--primery-br-color));
-  border-radius: 25px;
-}
-.soc-item:not(:last-child) {
-  margin-right: 10px;
-}
-.link-icon-soc:hover,
-.link-icon-soc:focus{
- background-color: var(--accent-color); 
-}
-.social-nav{
-  width: 20px;
-  height: 20px;
-  background-color: var(--primery-br-color);
-}
-*/
+
 /*секція наша команда*/
 
 /* постійні клієнти*/
@@ -517,12 +501,12 @@ width: 44px;
   margin-bottom: 20px;
 }
 
-
 .address-list > p {
   margin-top: 0px;
 }
 .text-address {
   margin-bottom: 9px;
+  
 }
 .address-list {
   font-style: normal;
@@ -530,6 +514,8 @@ width: 44px;
   font-style: regular;
   font-size: 14px;
   line-height: 1.1;
+  width: 231px;
+  margin-right: 70px;
 }
 .contact-list {
   margin-top: 0px;
@@ -540,6 +526,73 @@ width: 44px;
 .mail {
   margin-bottom: 9px;
 }
+
+.join{
+  display: flex;
+  align-items: baseline;
+  align-content: flex-start;
+}
+
+.coltwo > p{
+  margin-top: 0px;
+}
+.to-us{
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.1;
+  text-decoration: none;
+  font-style: normal;
+  color: var(--primery-br-color);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+
+.us-list{
+  display: inline-flex;
+  justify-content: center;
+  margin: 0px;
+ 
+}
+.us-nav{
+  display: inline-flex;
+  align-items: center;
+  
+}
+.us-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 0px;
+  border:none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  color: currentColor;
+  box-shadow: inset 10% #fff ; 
+}
+.us-item:not(:last-child){
+  margin-right: 10px;
+}
+.us-item:hover,
+.us-item:focus{
+  background: var(--accent-color);
+  fill: #ffffff;
+}
+
+.icon-us{
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+.icon-us:hover,
+.icon-us:focus{
+  fill: #ffffff; 
+}
+
+
 
 /*футер*/
 
@@ -577,6 +630,7 @@ width: 44px;
 .button-item:focus {
   color: var(--primery-br-color);
   background: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);;
 }
 
 /* проекти */
@@ -592,6 +646,9 @@ width: 44px;
   flex-basis: calc((100% / 3) - 30px);
   margin-top: 30px;
   margin-left: 30px;
+}
+.p-item:hover{
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .pack {
