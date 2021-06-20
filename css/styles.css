@@ -448,8 +448,8 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 170px;
-  max-height: 92px;
+  width: 170px;
+  height: 92px;
   fill: var(--border-clients);
   border: 1px solid var(--border-clients);
   border-radius: 4px;
@@ -464,10 +464,6 @@ h1 {
   border: 1px solid var(--accent-color);
 }
 
-.firm-icon{
-  width: 106px;
-  height: 60px;
-}
 
 
 /* постійні клієнти*/
@@ -529,15 +525,16 @@ h1 {
 
 .join{
   display: flex;
-  align-items: center;
-
+  align-items: baseline;
 }
+
 .colone{
   width: 231px;
 }
 .coltwo{
   margin-left: 70px;
 }
+
 .coltwo > p{
   margin-top: 0px;
 }
@@ -572,13 +569,13 @@ h1 {
  
 }
  
-.us-nav:not(:last-child){
+.us-item:not(:last-child){
   margin-right: 10px;
 }
+
 .us-nav:hover,
 .us-nsv:focus{
   background: var(--accent-color);
-  
 }
 
 .icon-us{
@@ -640,7 +637,11 @@ h1 {
   margin-top: 30px;
   margin-left: 30px;
 }
-.p-item:hover{
+.project-card{
+  display: block;
+  
+}
+.project-card:hover{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
