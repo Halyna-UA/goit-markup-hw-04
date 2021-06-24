@@ -2,6 +2,7 @@
   --primery-text-color: rgba(117, 117, 117, 1);
   --title-text-color: rgba(33, 33, 33, 1);
   --accent-color: rgba(33, 150, 243, 1);
+  --accent-color-opacity: rgba(33, 150, 243, 0.9);
   --primery-br-color: #fff;
   --brand-color: rgba(0, 0, 0, 1);
   --button-nav-color: #f5f4fa;
@@ -722,46 +723,44 @@ margin: 0px;
   color: var(--primery-text-color);
   flex-basis: 322px;
 }
+/*переходи і анімація*/
 .owerbox{
   display: inline-block;
   position: relative;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
-.thumb-project::before{
+.thumb-project{
   display: inline-block;
-  content: "";
   position: absolute;
+  opacity: 0;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 .owerlay{
-  
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
-.owerlay:hover.thumb-project::before{
-  transform: translateY(-100%);
-  
+.project-card:hover .thumb-project,
+.project-card:focus .thumb-project{
+  transform: translateY(0);
+  opacity: 1;
 }
 .only-project{
 font-size: 18px;
 line-height: 1.5;
 color: var(--primery-br-color);
-background-color: var(--accent-color);
-bottom: 0px;
+background-color: var(--accent-color-opacity);
+top: 0px;
 right: 0px;
 width: 100%;
 height: 100%;
 margin: 0;
 padding: 63px 24px;
-transform: translateY(-100%);
 transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-
 }
 
 
